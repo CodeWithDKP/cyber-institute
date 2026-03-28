@@ -1,66 +1,87 @@
-@import "tailwindcss";
+  @import "tailwindcss";
 
-/* Root Theme Colors */
-:root {
-  --background: #000000;
-  --foreground: #ffffff;
-
-  /* 🎨 Brand (Maroon Red Theme) */
-  --brand-primary: #a50808;   /* maroon */
-  --brand-secondary: #a52a2a; /* lighter maroon */
-  --border-color: #e5e5e5;
-}
-
-/* Tailwind v4 theme mapping */
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-
-  --color-brand-primary: var(--brand-primary);
-  --color-brand-secondary: var(--brand-secondary);
-  --color-border: var(--border-color);
-
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-/* Optional Dark Mode */
-@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
-
-    --brand-primary: #b22222;   /* brighter red for dark */
-    --brand-secondary: #8b0000;
-    --border-color: #2a2a2a;
+    --foreground: #ffffff;
+    --brand-primary: #a50808; 
+    --brand-secondary: #a52a2a;
+    --border-color: rgba(255, 255, 255, 0.05); /* Very subtle white border */
   }
-}
 
-/* Base Styles */
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
+  @theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
 
-/* Optional reusable utility classes (safe in v4) */
-.btn-primary {
-  background-color: var(--brand-primary);
-  color: white;
-  padding: 12px 24px;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: 0.3s;
-}
+    --color-brand-primary: var(--brand-primary);
+    --color-brand-secondary: var(--brand-secondary);
+    --color-border: var(--border-color);
+  }
 
-.btn-primary:hover {
-  background-color: var(--brand-secondary);
-}
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a;
+    
+      --foreground: #ededed;
+      --brand-primary: #b22222; 
+      --brand-secondary: #8b0000;
+      --border-color: rgba(255, 255, 255, 0.1);
+    }
+  }
 
-.card {
-  background-color: #ffffff;
-  border: 1px solid var(--border-color);
-  border-radius: 14px;
-  padding: 20px;
-}
+  body {
+    background: var(--background);
+
+    color: var(--foreground);
+    font-family: var(--font-sans), Arial, sans-serif;
+  }
+
+  /* --- REUSABLE UTILITIES --- */
+
+  .btn-primary {
+    background-color: var(--brand-primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  /* UPDATED CYBER CARD */
+  .card {
+    position: relative;
+    background-color: #121214; /* Specific dark charcoal from design */
+    border: 1px solid var(--border-color);
+    border-radius: 1rem; /* 16px */
+    padding: 3rem 1.5rem; /* Matches your py-12 px-6 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+  }
+
+  .card:hover {
+    border-color: rgba(165, 8, 8, 0.4); /* brand-primary with opacity */
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -15px rgba(165, 8, 8, 0.3);
+  }
+
+  /* Decorative bottom line inside the card */
+  .card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--brand-primary);
+    box-shadow: 0 0 15px var(--brand-primary);
+    transition: width 0.5s ease-in-out;
+  }
+
+  .card:hover::after {
+    width: 33.33%;
+  }

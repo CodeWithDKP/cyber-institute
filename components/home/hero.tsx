@@ -15,8 +15,8 @@ const Hero = () => {
                 {/* Left Content */}
                 <div className="space-y-6 md:space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start">
                     {/* Badge */}
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-primary/20 bg-brand-primary/5 text-[12px] md:text-[13px] font-medium text-brand-primary">
-                        <Lock size={14} className="text-brand-primary" />
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-primary bg-brand-primary/5 text-[12px] md:text-[13px] font-medium text-foreground">
+                        <Lock size={14} className="text-foreground" />
                         Premium Cybersecurity Training
                     </div>
 
