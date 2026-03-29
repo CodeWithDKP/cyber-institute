@@ -13,17 +13,17 @@ const CTA = () => {
 
           <div className="relative z-10 flex flex-col items-center space-y-6">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1]">
-              Start Your Cyber Security Career Today
+                Ready to Start Learning?
             </h2>
             
             <p className="text-white/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-              Join thousands of successful cybersecurity professionals who started their journey with us.
+               Get in touch with our counselors to find the perfect course for your career goals.
             </p>
 
             <div className="pt-6">
               <Link href="/contact#contact-form">
                 <button className="bg-[#ef4444] hover:bg-[#dc2626] text-white px-10 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-black/20">
-                  Enroll Now
+                  Contact Us
                 </button>
               </Link>
             </div>

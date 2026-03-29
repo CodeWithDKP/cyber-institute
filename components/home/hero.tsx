@@ -1,8 +1,9 @@
 "use client";
 import React from 'react';
+import Link from "next/link";
 import Image from 'next/image';
 import { ShieldCheck, Users, Trophy, Lock, ArrowRight } from 'lucide-react';
-import Cyber from '../../app/public/images/cyber.jpg'; 
+import Cyber from '../../app/public/images/cyber.jpg';
 
 const Hero = () => {
     return (
@@ -35,13 +36,22 @@ const Hero = () => {
 
                     {/* Action Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                        <button className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-brand-primary bg-brand-primary/10 hover:bg-brand-primary text-foreground font-semibold transition-all backdrop-blur-sm w-full sm:w-auto">
+                        {/* Explore Courses */}
+                        <Link
+                            href="/courses"
+                            className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-brand-primary bg-brand-primary/10 hover:bg-brand-primary text-foreground font-semibold transition-all backdrop-blur-sm w-full sm:w-auto"
+                        >
                             Explore Courses
                             <ArrowRight size={18} />
-                        </button>
-                        <button className="px-8 py-4 rounded-xl border border-foreground/20 hover:border-brand-primary text-foreground font-semibold transition-all bg-transparent backdrop-blur-sm w-full sm:w-auto">
+                        </Link>
+
+                        {/* Contact Us */}
+                        <Link
+                            href="/contact#contact-form"
+                            className="px-8 py-4 rounded-xl border border-foreground/20 hover:border-brand-primary text-foreground font-semibold transition-all bg-transparent backdrop-blur-sm w-full sm:w-auto text-center"
+                        >
                             Contact Us
-                        </button>
+                        </Link>
                     </div>
                 </div>
 
