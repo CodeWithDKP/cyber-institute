@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <nav className="w-full px-6 py-4 bg-background sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        
+
         {/* Logo */}
         <div className="flex items-center gap-3">
           <div className="bg-brand-primary w-10 h-10 rounded-xl flex items-center justify-center">
@@ -47,9 +47,8 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`${
-                  isActive ? "text-brand-primary" : "text-foreground"
-                } text-sm font-medium relative py-1 hover:text-brand-primary transition-colors`}
+                className={`${isActive ? "text-brand-primary" : "text-foreground"
+                  } text-sm font-medium relative py-1 hover:text-brand-primary transition-colors`}
               >
                 {link.name}
 
@@ -63,9 +62,12 @@ const Navbar = () => {
 
         {/* Right Section */}
         <div className="flex items-center gap-4">
-          <button className="hidden md:block border border-brand-primary hover:bg-brand-primary hover:text-white text-sm py-2.5 px-6 rounded-xl transition-all">
+          <Link
+            href="/contact#contact-form"
+            className="hidden md:block border border-brand-primary hover:bg-brand-primary hover:text-white text-sm py-2.5 px-6 rounded-xl transition-all"
+          >
             Enroll Now
-          </button>
+          </Link>
 
           {/* Mobile Toggle */}
           <button
@@ -79,9 +81,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-background border-b border-border overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden absolute top-full left-0 w-full bg-background border-b border-border overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <div className="flex flex-col p-6 space-y-4">
           {navLinks.map((link) => {
@@ -92,18 +93,21 @@ const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`${
-                  isActive ? "text-brand-primary" : "text-foreground"
-                } text-lg font-medium`}
+                className={`${isActive ? "text-brand-primary" : "text-foreground"
+                  } text-lg font-medium`}
               >
                 {link.name}
               </Link>
             );
           })}
 
-          <button className="bg-brand-primary text-white w-full py-3 rounded-xl font-bold mt-2">
+          <Link
+            href="/contact#contact-form"
+            onClick={() => setIsOpen(false)}
+            className="bg-brand-primary text-white w-full py-3 rounded-xl font-bold mt-2 text-center block"
+          >
             Enroll Now
-          </button>
+          </Link>
         </div>
       </div>
     </nav>

@@ -81,8 +81,8 @@ const Courses = () => {
               </p>
 
               {/* View Details Link */}
-              <Link 
-                href="#" 
+              <Link
+                href="#"
                 className="inline-flex items-center gap-2 text-brand-primary text-sm font-bold hover:gap-3 transition-all"
               >
                 View Details
@@ -94,9 +94,12 @@ const Courses = () => {
 
         {/* View All Button */}
         <div className="flex justify-center">
-          <button className="btn-primary !px-10 !py-4 text-base shadow-xl shadow-brand-primary/20 hover:scale-105 transition-transform">
+          <Link
+            href="/courses#courseList"
+            className="btn-primary !px-10 !py-4 text-base shadow-xl shadow-brand-primary/20 hover:scale-105 transition-transform inline-block text-center"
+          >
             View All Courses
-          </button>
+          </Link>
         </div>
       </div>
     </section>
