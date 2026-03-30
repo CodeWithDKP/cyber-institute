@@ -4,13 +4,20 @@ import React from 'react';
 import { Send, MapPin, PhoneCall } from 'lucide-react';
 
 const ContactForm = () => {
+  const handleDisabledForm = () => {
+  alert("Form is disabled. Please call us directly or use the contact numbers.");
+};
   return (
     <section className="bg-[#1a1a1c] py-12 px-6" id='contact-form'>
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
 
         {/* LEFT: Contact Form (Spans 2 columns on large screens) */}
         <div className="lg:col-span-2 card !items-start !text-left !p-10 !cursor-default !transform-none !transition-none hover:!shadow-none hover:!border-white/5 hover:!after:w-0">
+         <p className="text-brand-primary text-sm">
+  For faster response, please call us directly.
+</p>
           <div className="mb-8">
+            
             <h2 className="text-3xl font-bold text-white mb-2">Send us a Message</h2>
             <p className="text-foreground/50 text-sm">Fill out the form below and we'll get back to you shortly.</p>
           </div>
@@ -19,22 +26,22 @@ const ContactForm = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-sm font-bold text-white">Full Name *</label>
-                <input type="text" placeholder="Enter your full name" className="w-full bg-[#1a1a1c] border border-white/5 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-brand-primary transition-colors" />
+                <input onClick={handleDisabledForm} type="text" placeholder="Enter your full name" className="w-full bg-[#1a1a1c] border border-white/5 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-brand-primary transition-colors" />
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-bold text-white">Email Address *</label>
-                <input type="email" placeholder="Enter your email" className="w-full bg-[#1a1a1c] border border-white/5 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-brand-primary transition-colors" />
+                <input onClick={handleDisabledForm} type="email" placeholder="Enter your email" className="w-full bg-[#1a1a1c] border border-white/5 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-brand-primary transition-colors" />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-sm font-bold text-white">Phone Number *</label>
-                <input type="text" placeholder="Enter your phone number" className="w-full bg-[#1a1a1c] border border-white/5 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-brand-primary transition-colors" />
+                <input onClick={handleDisabledForm} type="text" placeholder="Enter your phone number" className="w-full bg-[#1a1a1c] border border-white/5 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-brand-primary transition-colors" />
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-bold text-white">Interested Course</label>
-                <select className="w-full bg-[#1a1a1c] border border-white/5 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-brand-primary appearance-none cursor-pointer">
+                <select onClick={handleDisabledForm} className="w-full bg-[#1a1a1c] border border-white/5 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-brand-primary appearance-none cursor-pointer">
                   <option>Select a course</option>
                   <option>Ethical Hacking</option>
                   <option>Network Security</option>
@@ -48,10 +55,10 @@ const ContactForm = () => {
 
             <div className="space-y-2">
               <label className="text-sm font-bold text-white">Message *</label>
-              <textarea rows={5} placeholder="Tell us about your requirements" className="w-full bg-[#1a1a1c] border border-white/5 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-brand-primary transition-colors resize-none"></textarea>
+              <textarea onClick={handleDisabledForm} rows={5} placeholder="Tell us about your requirements" className="w-full bg-[#1a1a1c] border border-white/5 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-brand-primary transition-colors resize-none"></textarea>
             </div>
 
-            <button type="button" className="w-full bg-[#e3342f] hover:bg-brand-primary text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-colors">
+            <button onClick={handleDisabledForm} type="button" className="w-full bg-[#e3342f] hover:bg-brand-primary text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-colors">
               Send Message <Send size={18} />
             </button>
           </form>
