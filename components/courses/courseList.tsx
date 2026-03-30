@@ -1,69 +1,144 @@
 "use client";
 import Link from "next/link";
 import React from 'react';
-import { Shield, Network, Search, Code, Cloud, Target, Clock, Users, GraduationCap } from 'lucide-react';
+import { Shield, Network, Search, Code, Cloud, Target, Clock, Users, GraduationCap, Monitor, Settings, Lock, Terminal } from 'lucide-react';
 
 const CourseList = () => {
   const courses = [
     {
-      title: "Ethical Hacking",
+      title: "Microsoft Intune Training",
+      icon: <Monitor size={24} />,
+      duration: "2 Months",
+      students: "150+",
+      level: "Intermediate",
+      desc: "Master Microsoft Intune for MDM and MAM. Learn device enrollment, configuration profiles, compliance policies, and integration with Azure AD and Defender for Endpoint.",
+      topics: ["Autopilot & Co-Management", "Compliance Policies", "Intune MAM", "Endpoint Security"],
+    },
+    {
+      title: "Microsoft SCCM Course",
+      icon: <Settings size={24} />,
+      duration: "3 Months",
+      students: "200+",
+      level: "Intermediate to Advanced",
+      desc: "Comprehensive training on System Center Configuration Manager. Focus on site installation, resource discovery, software deployment, and operating system deployment (OSD).",
+      topics: ["Infrastructure Setup", "Client Management", "Software Updates", "OS Deployment"],
+    },
+    {
+      title: "Next-Generation SOC Analyst Training with AI",
+      icon: <Target size={24} />,
+      duration: "3 Months",
+      students: "300+",
+      level: "Advanced",
+      desc: "Advanced security operations training incorporating AI-driven threat detection and response strategies for the modern landscape.",
+      topics: ["AI in Security", "Incident Response", "Threat Intelligence"],
+    },
+    {
+      title: "Microsoft Azure Sentinel Training",
+      icon: <Cloud size={24} />,
+      duration: "2 Months",
+      students: "180+",
+      level: "Intermediate",
+      desc: "Cloud-native SIEM training. Learn to collect data across your enterprise and use intelligent security analytics to face threats.",
+      topics: ["SIEM/SOAR", "Log Analytics", "KQL Queries"],
+    },
+    {
+      title: "Certified Ethical Hacking (CEH v13 AI)",
       icon: <Shield size={24} />,
       duration: "3 Months",
       students: "500+",
       level: "Beginner to Advanced",
-      desc: "Master penetration testing, vulnerability assessment, and ethical hacking techniques. Learn to identify and exploit security weaknesses like a professional hacker.",
-      topics: ["Network Scanning", "Web Application Testing", "Social Engineering"],
-      price: "₹45,000"
+      desc: "Master penetration testing and ethical hacking techniques using the latest AI-enhanced tools and methodologies.",
+      topics: ["Network Scanning", "Vulnerability Analysis", "AI Hacking Tools"],
     },
     {
-      title: "Network Security",
-      icon: <Network size={24} />,
+      title: "CompTIA Security+ Certification",
+      icon: <Lock size={24} />,
       duration: "2 Months",
-      students: "350+",
-      level: "Intermediate",
-      desc: "Learn to design, implement, and manage secure network infrastructures. Master firewalls, VPNs, IDS/IPS systems, and network defense strategies.",
-      topics: ["Firewall Configuration", "VPN Setup", "Network Monitoring"],
-      price: "₹35,000"
+      students: "450+",
+      level: "Beginner",
+      desc: "Establish the core knowledge required of any cybersecurity role and provide a springboard to intermediate-level cybersecurity jobs.",
+      topics: ["Threats & Attacks", "Architecture", "Cryptography"],
     },
     {
-      title: "Cyber Forensics",
-      icon: <Search size={24} />,
-      duration: "3 Months",
-      students: "200+",
+      title: "Cortex XSOAR Training",
+      icon: <Terminal size={24} />,
+      duration: "2 Months",
+      students: "120+",
       level: "Advanced",
-      desc: "Investigate and analyze cyber crimes effectively. Learn digital evidence collection, analysis tools, and forensic investigation procedures.",
-      topics: ["Digital Evidence Collection", "Memory Forensics", "Network Forensics"],
-      price: "₹50,000"
+      desc: "Learn to automate security tier-1 tasks and manage incidents with Palo Alto's premier SOAR platform.",
+      topics: ["Playbook Automation", "Incident Management", "Integrations"],
     },
     {
-      title: "Web Security",
-      icon: <Code size={24} />,
-      duration: "2 Months",
-      students: "400+",
+      title: "Splunk Admin + Enterprise Security",
+      icon: <Search size={24} />,
+      duration: "2.5 Months",
+      students: "220+",
       level: "Intermediate",
-      desc: "Secure web applications from common vulnerabilities. Master OWASP Top 10, secure coding practices, and web application firewall configuration.",
-      topics: ["OWASP Top 10", "SQL Injection", "XSS Attacks"],
-      price: "₹30,000"
+      desc: "Master Splunk administration and the Enterprise Security (ES) app for data-driven security insights.",
+      topics: ["Data Ingestion", "Dashboarding", "ES Framework"],
     },
     {
-      title: "Cloud Security",
+      title: "CrowdStrike EDR Training",
+      icon: <Shield size={24} />,
+      duration: "2 Months",
+      students: "140+",
+      level: "Intermediate",
+      desc: "Focused training on Falcon Endpoint Detection and Response to stop breaches through unified visibility and control.",
+      topics: ["Endpoint Protection", "Threat Hunting", "Real-time Response"],
+    },
+    {
+      title: "Nessus Vulnerability Management",
+      icon: <Search size={24} />,
+      duration: "2 Months",
+      students: "190+",
+      level: "Intermediate",
+      desc: "Professional training on the industry standard for vulnerability assessment and compliance management.",
+      topics: ["Vulnerability Scanning", "Reporting", "Compliance"],
+    },
+    {
+      title: "CISM Certification Training",
+      icon: <GraduationCap size={24} />,
+      duration: "3 Months",
+      students: "110+",
+      level: "Expert",
+      desc: "Focused on management and governance, this course prepares you for the Certified Information Security Manager exam.",
+      topics: ["Risk Management", "Governance", "Program Development"],
+    },
+    {
+      title: "CISA Training & Certification",
+      icon: <GraduationCap size={24} />,
+      duration: "2 Months",
+      students: "95+",
+      level: "Expert",
+      desc: "The standard of achievement for those who audit, control, monitor, and assess information technology.",
+      topics: ["IT Auditing", "Governance", "Asset Protection"],
+    },
+    {
+      title: "Cloud Security Professional (CCSP)",
       icon: <Cloud size={24} />,
       duration: "2.5 Months",
-      students: "250+",
-      level: "Intermediate to Advanced",
-      desc: "Protect cloud infrastructure on AWS, Azure, and GCP. Learn cloud security architecture, compliance, and best practices.",
-      topics: ["AWS Security", "Azure Security", "Cloud Compliance"],
-      price: "₹40,000"
+      students: "130+",
+      level: "Advanced",
+      desc: "Learn the high-level skills needed to design, manage, and secure data, applications, and infrastructure in the cloud.",
+      topics: ["Cloud Architecture", "Data Security", "Operations"],
     },
     {
-      title: "SOC Operations",
-      icon: <Target size={24} />,
+      title: "CISSP Online Training",
+      icon: <Shield size={24} />,
       duration: "3 Months",
-      students: "300+",
+      students: "210+",
+      level: "Expert",
+      desc: "Comprehensive training for the most globally recognized certification in the information security market.",
+      topics: ["Security Engineering", "Communication", "IAM"],
+    },
+    {
+      title: "IBM QRadar Training",
+      icon: <Target size={24} />,
+      duration: "2 Months",
+      students: "100+",
       level: "Intermediate",
-      desc: "Learn to operate and manage Security Operations Centers. Master SIEM tools, threat hunting, and incident response procedures.",
-      topics: ["SIEM Tools", "Log Analysis", "Threat Hunting"],
-      price: "₹42,000"
+      desc: "In-depth training on IBM QRadar SIEM to detect and prioritize threats across the enterprise.",
+      topics: ["Log Management", "Anomaly Detection", "Rules Engine"],
     }
   ];
 
@@ -73,17 +148,17 @@ const CourseList = () => {
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
-            All Courses
+            Our Professional Training Courses
           </h2>
           <p className="text-foreground/50 font-medium max-w-2xl mx-auto">
-            Choose the perfect course to start your cybersecurity career
+            Industry-aligned curriculum designed to take you from fundamentals to advanced technical expertise.
           </p>
         </div>
 
         {/* Courses Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {courses.map((course, index) => (
-            <div key={index} className="card !items-start !text-left !p-8 group">
+            <div key={index} className="card !items-start !text-left !p-8 group flex flex-col h-full">
               {/* Course Icon Box */}
               <div className="w-14 h-14 rounded-xl bg-brand-primary flex items-center justify-center text-white mb-6 shadow-lg shadow-brand-primary/20">
                 {course.icon}
@@ -121,12 +196,8 @@ const CourseList = () => {
                 </div>
               </div>
 
-              {/* Footer: Price & Button */}
-              <div className="mt-auto w-full pt-6 border-t border-white/5 flex items-center justify-between">
-                <span className="text-2xl font-bold text-brand-primary">
-                  {course.price}
-                </span>
-
+              {/* Footer: Button Only (Price Removed) */}
+              <div className="mt-auto w-full pt-6 border-t border-white/5 flex items-center justify-end">
                 <Link href="/contact#contact-form">
                   <button className="bg-brand-primary hover:bg-brand-secondary text-white text-sm font-bold px-6 py-2.5 rounded-lg transition-colors">
                     Enroll Now

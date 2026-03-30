@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import Logo from "../../app/public/images/CYSECLOGO.jpg"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,13 +31,16 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
 
         {/* Logo */}
-        <div className="flex items-center gap-3">
-          <div className="bg-brand-primary w-10 h-10 rounded-xl flex items-center justify-center">
-            <span className="text-white font-bold text-xl">C</span>
+        <div className="flex items-center">
+          <div className="w-10 h-10 relative">
+            <Image
+              src={Logo}  // place in /public
+              alt="Cyber Institute Logo"
+              fill
+              sizes="40px"
+              className="object-contain"
+            />
           </div>
-          <span className="text-foreground font-bold text-xl tracking-tight">
-            Cyber Institute
-          </span>
         </div>
 
         {/* Desktop Menu */}

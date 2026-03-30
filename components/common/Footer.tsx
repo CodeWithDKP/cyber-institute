@@ -55,15 +55,16 @@ const Footer = () => {
             <ul className="space-y-4 text-sm text-foreground/50">
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-brand-primary" />
-                <span>+91 9876543210</span>
+                <span>+91 9959043515</span>
+                <span>+91 8332881713</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-brand-primary" />
-                <span>info@cyberinstitute.com</span>
+                <span>cysectrainings@gmail.com</span>
               </li>
               <li className="flex items-center gap-3">
                 <MapPin size={18} className="text-brand-primary" />
-                <span>Hyderabad, India</span>
+                <span>B block Flat no: 402 , suja elysian Madhura Nagar, Nizampet, Hyderabad, Telangana 5000 HYDERABAD, TELANGANA 500090 India</span>
               </li>
             </ul>
           </div>

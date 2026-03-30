@@ -82,7 +82,7 @@ const Courses = () => {
 
               {/* View Details Link */}
               <Link
-                href="#"
+                href="/courses#courseList"
                 className="inline-flex items-center gap-2 text-brand-primary text-sm font-bold hover:gap-3 transition-all"
               >
                 View Details

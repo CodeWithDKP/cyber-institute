@@ -62,6 +62,7 @@ const Hero = () => {
                         <Image
                             src={Cyber}
                             alt="Cyber Security Lab"
+                            priority
                             className="rounded-[1.2rem] md:rounded-[2rem] w-full max-w-[550px] aspect-[3/2] object-cover shadow-inner"
                         />
                     </div>

@@ -7,17 +7,17 @@ const ContactCards = () => {
   const contactInfo = [
     {
       title: "Phone",
-      detail: "+91 9876543210",
+      detail: "+91 9959043515 +91 8332881713",
       icon: <Phone size={24} className="text-brand-primary" />,
     },
     {
       title: "Email",
-      detail: "info@cyberinstitute.com",
+      detail: "cysectrainings@gmail.com",
       icon: <Mail size={24} className="text-brand-primary" />,
     },
     {
       title: "Address",
-      detail: "Mumbai, Maharashtra, India",
+      detail: "B block Flat no: 402 , suja elysian Madhura Nagar, Nizampet, Hyderabad, Telangana 5000 HYDERABAD, TELANGANA 500090 India",
       icon: <MapPin size={24} className="text-brand-primary" />,
     },
   ];
