@@ -29,7 +29,7 @@ const ContactCards = () => {
     {
       title: "Address",
       detail:
-        "B Block Flat No: 402, Suja Elysian, Madhura Nagar, Nizampet, Hyderabad, Telangana 500090, India",
+        "Madhura Nagar, Nizampet, Hyderabad, Telangana.",
       icon: <MapPin size={24} className="text-brand-primary" />,
       action: () => {
         window.open(

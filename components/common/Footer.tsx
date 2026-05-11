@@ -64,7 +64,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <MapPin size={18} className="text-brand-primary" />
-                <span>B block Flat no: 402 , suja elysian Madhura Nagar, Nizampet, Hyderabad, Telangana 5000 HYDERABAD, TELANGANA 500090 India</span>
+                <span>Madhura Nagar, Nizampet, Hyderabad, Telangana.</span>
               </li>
             </ul>
           </div>

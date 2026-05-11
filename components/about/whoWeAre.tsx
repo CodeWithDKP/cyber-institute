@@ -15,26 +15,18 @@ const WhoWeAre = () => {
           </h2>
           
           <div className="space-y-6 text-foreground/70 leading-relaxed text-base md:text-lg">
-            <p>
-              Cyber Institute is a premier cybersecurity training organization dedicated to building 
-              skilled professionals who can tackle modern cyber threats. Established with a vision 
-              to create a safer digital world, we have trained thousands of students and 
-              professionals in various domains of cybersecurity.
-            </p>
-            
-            <p>
-              Our comprehensive training programs are designed by industry experts and 
-              delivered through a combination of theoretical knowledge and hands-on practical 
-              sessions. We focus on real-world scenarios to ensure our students are job-ready 
-              from day one.
-            </p>
-            
-            <p>
-              With state-of-the-art labs, experienced instructors, and strong industry partnerships, 
-              we provide an unmatched learning experience that prepares students for successful 
-              careers in cybersecurity.
-            </p>
-          </div>
+  <p>
+    Cyber Institute is a premier cybersecurity training organization with over 20 years of industry experience dedicated to building skilled professionals who can tackle modern cyber threats. Established with a vision to create a safer digital world, we have trained thousands of students and professionals across multiple domains of cybersecurity.
+  </p>
+  
+  <p>
+    Our comprehensive training programs are designed by certified industry experts and delivered through a combination of theoretical knowledge, practical labs, and real-world simulations. We focus on hands-on learning to ensure our students become job-ready from day one.
+  </p>
+  
+  <p>
+    With state-of-the-art labs, experienced instructors, strong industry partnerships, and a commitment to excellence, we provide an unmatched learning experience that prepares students for successful careers in cybersecurity and information security.
+  </p>
+</div>
         </div>
 
         {/* Right Side: Image with Styled Border */}

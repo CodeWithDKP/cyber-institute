@@ -3,8 +3,8 @@ import React from 'react';
 
 const Stats = () => {
   const statData = [
-    { value: "500+", label: "Students" },
-    { value: "20+", label: "Courses" },
+    { value: "100+", label: "Students" },
+    { value: "05+", label: "Courses" },
     { value: "90%", label: "Placement Rate" },
   ];
 
